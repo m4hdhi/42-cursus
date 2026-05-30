@@ -53,14 +53,16 @@ void Harl::error(void)
 
 int Harl::getLevel(std::string level) const
 {
-	if (level == "DEBUG")
-		return (0);
-	if (level == "INFO")
-		return (1);
-	if (level == "WARNING")
-		return (2);
-	if (level == "ERROR")
-		return (3);
+	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	int i;
+
+	i = 0;
+	while (i < 4)
+	{
+		if (levels[i] == level)
+			return (i);
+		i++;
+	}
 	return (-1);
 }
 

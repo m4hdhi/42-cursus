@@ -99,6 +99,8 @@ int main(int argc, char **argv)
 	}
 	if (readFile(filename, content))
 		return (1);
+	if (content.empty())
+		std::cerr << "Notice: input file is empty" << std::endl;
 	if (writeFile(filename, replaceAll(content, argv[2], argv[3])))
 		return (1);
 	return (0);
