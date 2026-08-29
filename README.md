@@ -35,7 +35,7 @@ At 42 there are no teachers, no lectures and no courses: you learn **C, C++, Uni
 | [**fract-ol**](./fract-ol) | Graphics & complex numbers with MiniLibX 🌀 | ✅ **in this repo** |
 | [**minishell**](./minishell) | Writing your own bash 🐚 | ✅ **in this repo** |
 | [**Philosophers**](./philosophers) | Threads, mutexes, deadlocks 🍝 | ✅ **in this repo** |
-| **NetPractice** | TCP/IP addressing & subnetting 🌐 | ✅ done at 42 (browser-based, no code) |
+| [**NetPractice**](./netpractice) | TCP/IP addressing & subnetting 🌐 | ✅ **in this repo** |
 | [**cub3d**](./cub3d) | Raycasting - a 3D maze like Wolfenstein 🎮 | ✅ **in this repo** |
 | [**CPP Module 00**](./cpp-module-00) | C++ basics, classes, `std::string` | ✅ **in this repo** |
 | [**CPP Module 01**](./cpp-module-01) | Memory, references, pointers to members | ✅ **in this repo** |
