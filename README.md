@@ -38,7 +38,7 @@ At 42 there are no teachers, no lectures and no courses: you learn **C, C++, Uni
 | **NetPractice** | TCP/IP addressing & subnetting 🌐 | ✅ done at 42 (browser-based, no code) |
 | [**cub3d**](./cub3d) | Raycasting - a 3D maze like Wolfenstein 🎮 | ✅ **in this repo** |
 | [**CPP Module 00**](./cpp-module-00) | C++ basics, classes, `std::string` | ✅ **in this repo** |
-| **CPP Module 01** | Memory, references, pointers to members | 📦 uploading |
+| [**CPP Module 01**](./cpp-module-01) | Memory, references, pointers to members | ✅ **in this repo** |
 | [**CPP Module 02**](./cpp-module-02) | Ad-hoc polymorphism, operator overloading | ✅ **in this repo** |
 | [**CPP Module 03**](./cpp-module-03) | Inheritance 🧬 | ✅ **in this repo** |
 | [**CPP Module 04**](./cpp-module-04) | Subtype polymorphism, abstract classes | ✅ **in this repo** |
