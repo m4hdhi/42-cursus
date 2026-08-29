@@ -26,21 +26,24 @@ At 42 there are no teachers, no lectures and no courses: you learn **C, C++, Uni
 
 | 🪐 Project | 🧩 What it teaches | 📌 Status |
 |---|---|---|
-| **Libft** | Rebuilding the C standard library from zero | 🔜 on the way |
-| **ft_printf** | Variadic functions, formatting, parsing | 🔜 on the way |
-| **get_next_line** | File descriptors, buffers, static variables | 🔜 on the way |
-| **Born2beRoot** | Sysadmin, virtualization, hardening 🛡️ | 🔜 on the way |
-| **push_swap** | Sorting algorithms & complexity ⚙️ | 🔜 on the way |
-| **minishell** | Writing your own bash 🐚 | 🔜 on the way |
-| **Philosophers** | Threads, mutexes, deadlocks 🍝 | 🔜 on the way |
+| [**Libft**](./libft) | Rebuilding the C standard library from zero | ✅ **in this repo** |
+| [**ft_printf**](./ft_printf) | Variadic functions, formatting, parsing | ✅ **in this repo** |
+| [**get_next_line**](./get_next_line) | File descriptors, buffers, static variables | ✅ **in this repo** |
+| [**Born2beRoot**](./born2beroot) | Sysadmin, virtualization, hardening 🛡️ | ✅ **in this repo** |
+| [**minitalk**](./minitalk) | UNIX signals, client-server IPC 📡 | ✅ **in this repo** |
+| [**push_swap**](./push_swap) | Sorting algorithms & complexity ⚙️ | ✅ **in this repo** |
+| [**fract-ol**](./fract-ol) | Graphics & complex numbers with MiniLibX 🌀 | ✅ **in this repo** |
+| [**minishell**](./minishell) | Writing your own bash 🐚 | ✅ **in this repo** |
+| [**Philosophers**](./philosophers) | Threads, mutexes, deadlocks 🍝 | ✅ **in this repo** |
+| **NetPractice** | TCP/IP addressing & subnetting 🌐 | ✅ done at 42 (browser-based, no code) |
+| [**cub3d**](./cub3d) | Raycasting - a 3D maze like Wolfenstein 🎮 | ✅ **in this repo** |
 | [**CPP Module 00**](./cpp-module-00) | C++ basics, classes, `std::string` | ✅ **in this repo** |
 | **CPP Module 01** | Memory, references, pointers to members | 📦 uploading |
-| **CPP Module 02** | Ad-hoc polymorphism, operator overloading | 📦 uploading |
-| **CPP Module 03** | Inheritance 🧬 | 📦 uploading |
-| **CPP Module 04** | Subtype polymorphism, abstract classes | 📦 uploading |
+| [**CPP Module 02**](./cpp-module-02) | Ad-hoc polymorphism, operator overloading | ✅ **in this repo** |
+| [**CPP Module 03**](./cpp-module-03) | Inheritance 🧬 | ✅ **in this repo** |
+| [**CPP Module 04**](./cpp-module-04) | Subtype polymorphism, abstract classes | ✅ **in this repo** |
 | **CPP Module 05** | Exceptions & nested classes | 🚧 in progress at 42 |
 | **CPP Modules 06-09** | Casts, templates, STL containers | 🔮 coming |
-| **NetPractice** | TCP/IP addressing & subnetting 🌐 | 🔜 on the way |
 | **Inception** | Docker, docker-compose, infrastructure 🐳 | 🔮 coming |
 | **webserv / ft_irc** | Your own HTTP server / IRC server | 🔮 coming |
 | **ft_transcendence** | Full-stack web app - the final boss 👑 | 🔮 coming |
