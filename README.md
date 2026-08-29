@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00babc&height=200&section=header&text=42%20Cursus%20%E2%9A%A1&fontSize=64&fontColor=ffffff&animation=fadeIn&desc=My%20Common%20Core%20journey%20at%2042%20Abu%20Dhabi&descAlignY=78&descSize=18" alt="42 Cursus — 42 Abu Dhabi Common Core projects banner" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00babc&height=200&section=header&text=42%20Cursus%20%E2%9A%A1&fontSize=64&fontColor=ffffff&animation=fadeIn&desc=My%20Common%20Core%20journey%20at%2042%20Abu%20Dhabi&descAlignY=78&descSize=18" alt="42 Cursus - 42 Abu Dhabi Common Core projects banner" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00BABC&center=true&vCenter=true&width=620&lines=C+%E2%80%A2+C%2B%2B+%E2%80%A2+Unix+%E2%80%A2+Algorithms+%E2%80%A2+Networking;Built+from+scratch.+No+shortcuts.;Real+commit+history%2C+straight+from+vogsphere+%F0%9F%9A%80" alt="Typing animation: C, C++, Unix, Algorithms, Networking — built from scratch"/>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00BABC&center=true&vCenter=true&width=620&lines=C+%E2%80%A2+C%2B%2B+%E2%80%A2+Unix+%E2%80%A2+Algorithms+%E2%80%A2+Networking;Built+from+scratch.+No+shortcuts.;Real+commit+history%2C+straight+from+vogsphere+%F0%9F%9A%80" alt="Typing animation: C, C++, Unix, Algorithms, Networking - built from scratch"/>
 
 <br/><br/>
 
@@ -16,11 +16,11 @@
 
 ## 👨‍🚀 About
 
-Welcome to my **42 School Common Core** — every project of the **42 cursus** at **42 Abu Dhabi**, in one place.
+Welcome to my **42 School Common Core** - every project of the **42 cursus** at **42 Abu Dhabi**, in one place.
 
-At 42 there are no teachers, no lectures and no courses: you learn **C, C++, Unix, algorithms, networking and DevOps** by building everything yourself and defending it in peer evaluations. This repo is mirrored **directly from the campus git server (vogsphere)** with the **full, unedited commit history** — so you're not just seeing final solutions, you can watch every project evolve commit by commit. 🧠
+At 42 there are no teachers, no lectures and no courses: you learn **C, C++, Unix, algorithms, networking and DevOps** by building everything yourself and defending it in peer evaluations. This repo is mirrored **directly from the campus git server (vogsphere)** with the **full, unedited commit history** - so you're not just seeing final solutions, you can watch every project evolve commit by commit. 🧠
 
-> 🎯 **Why this repo exists:** to track my progress, and to help other 42 students *understand* the projects — not to be copy-pasted (see the [disclaimer](#%EF%B8%8F-disclaimer)).
+> 🎯 **Why this repo exists:** to track my progress, and to help other 42 students *understand* the projects - not to be copy-pasted (see the [disclaimer](#%EF%B8%8F-disclaimer)).
 
 ## 🗺️ The Roadmap
 
@@ -39,17 +39,17 @@ At 42 there are no teachers, no lectures and no courses: you learn **C, C++, Uni
 | **CPP Module 03** | Inheritance 🧬 | 📦 uploading |
 | **CPP Module 04** | Subtype polymorphism, abstract classes | 📦 uploading |
 | **CPP Module 05** | Exceptions & nested classes | 🚧 in progress at 42 |
-| **CPP Modules 06–09** | Casts, templates, STL containers | 🔮 coming |
+| **CPP Modules 06-09** | Casts, templates, STL containers | 🔮 coming |
 | **NetPractice** | TCP/IP addressing & subnetting 🌐 | 🔜 on the way |
 | **Inception** | Docker, docker-compose, infrastructure 🐳 | 🔮 coming |
 | **webserv / ft_irc** | Your own HTTP server / IRC server | 🔮 coming |
-| **ft_transcendence** | Full-stack web app — the final boss 👑 | 🔮 coming |
+| **ft_transcendence** | Full-stack web app - the final boss 👑 | 🔮 coming |
 
-*The table fills up as projects land here — hit `Watch` 👀 to follow along.*
+*The table fills up as projects land here - hit `Watch` 👀 to follow along.*
 
 ## 🔄 How the mirror works
 
-Vogsphere (42's git server) has no GitHub integration, so I built [`42sync.sh`](./42sync.sh) — a small `git subtree` tool that keeps this repo and 42 in sync. **One command submits to 42 and updates GitHub at the same time:**
+Vogsphere (42's git server) has no GitHub integration, so I built [`42sync.sh`](./42sync.sh) - a small `git subtree` tool that keeps this repo and 42 in sync. **One command submits to 42 and updates GitHub at the same time:**
 
 ```mermaid
 graph LR
@@ -64,7 +64,7 @@ graph LR
 ./42sync.sh pull cpp-module-05                     # grab commits pushed from another clone
 ```
 
-Fellow 42 students: it's campus-agnostic — point it at your own vogsphere URLs and enjoy. ⭐
+Fellow 42 students: it's campus-agnostic - point it at your own vogsphere URLs and enjoy. ⭐
 
 ## 🛠️ Tech I'm working with
 
@@ -82,11 +82,11 @@ Fellow 42 students: it's campus-agnostic — point it at your own vogsphere URLs
 
 ## ⚠️ Disclaimer
 
-This repository is for **learning and reference**. If you're a 42 student: struggle first, peek later — submitting code you can't defend will end badly in evals (and Moulinette has seen everything 🤖). Use it to compare approaches *after* you've fought the project yourself.
+This repository is for **learning and reference**. If you're a 42 student: struggle first, peek later - submitting code you can't defend will end badly in evals (and Moulinette has seen everything 🤖). Use it to compare approaches *after* you've fought the project yourself.
 
 ## 🤝 Connect
 
-Found something useful? **Leave a ⭐ — it genuinely helps other students find this repo.**
+Found something useful? **Leave a ⭐ - it genuinely helps other students find this repo.**
 
 📍 42 intra: `mamuzamm` · 🐙 GitHub: [@m4hdhi](https://github.com/m4hdhi)
 
