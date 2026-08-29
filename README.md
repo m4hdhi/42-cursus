@@ -24,29 +24,29 @@ At 42 there are no teachers, no lectures and no courses: you learn **C, C++, Uni
 
 ## 🗺️ The Roadmap
 
-| 🪐 Project | 🧩 What it teaches | 📌 Status |
-|---|---|---|
-| [**Libft**](./libft) | Rebuilding the C standard library from zero | ✅ **in this repo** |
-| [**ft_printf**](./ft_printf) | Variadic functions, formatting, parsing | ✅ **in this repo** |
-| [**get_next_line**](./get_next_line) | File descriptors, buffers, static variables | ✅ **in this repo** |
-| [**Born2beRoot**](./born2beroot) | Sysadmin, virtualization, hardening 🛡️ | ✅ **in this repo** |
-| [**minitalk**](./minitalk) | UNIX signals, client-server IPC 📡 | ✅ **in this repo** |
-| [**push_swap**](./push_swap) | Sorting algorithms & complexity ⚙️ | ✅ **in this repo** |
-| [**fract-ol**](./fract-ol) | Graphics & complex numbers with MiniLibX 🌀 | ✅ **in this repo** |
-| [**minishell**](./minishell) | Writing your own bash 🐚 | ✅ **in this repo** |
-| [**Philosophers**](./philosophers) | Threads, mutexes, deadlocks 🍝 | ✅ **in this repo** |
-| [**NetPractice**](./netpractice) | TCP/IP addressing & subnetting 🌐 | ✅ **in this repo** |
-| [**cub3d**](./cub3d) | Raycasting - a 3D maze like Wolfenstein 🎮 | ✅ **in this repo** |
-| [**CPP Module 00**](./cpp-module-00) | C++ basics, classes, `std::string` | ✅ **in this repo** |
-| [**CPP Module 01**](./cpp-module-01) | Memory, references, pointers to members | ✅ **in this repo** |
-| [**CPP Module 02**](./cpp-module-02) | Ad-hoc polymorphism, operator overloading | ✅ **in this repo** |
-| [**CPP Module 03**](./cpp-module-03) | Inheritance 🧬 | ✅ **in this repo** |
-| [**CPP Module 04**](./cpp-module-04) | Subtype polymorphism, abstract classes | ✅ **in this repo** |
-| **CPP Module 05** | Exceptions & nested classes | 🚧 in progress at 42 |
-| **CPP Modules 06-09** | Casts, templates, STL containers | 🔮 coming |
-| **Inception** | Docker, docker-compose, infrastructure 🐳 | 🔮 coming |
-| **webserv / ft_irc** | Your own HTTP server / IRC server | 🔮 coming |
-| **ft_transcendence** | Full-stack web app - the final boss 👑 | 🔮 coming |
+| ⭕ | 🪐 Project | 🧩 What it teaches | 📌 Status |
+|---|---|---|---|
+| 0 | [**Libft**](./circle-0/libft) | Rebuilding the C standard library from zero | ✅ **in this repo** |
+| 1 | [**ft_printf**](./circle-1/ft_printf) | Variadic functions, formatting, parsing | ✅ **in this repo** |
+| 1 | [**get_next_line**](./circle-1/get_next_line) | File descriptors, buffers, static variables | ✅ **in this repo** |
+| 1 | [**Born2beRoot**](./circle-1/born2beroot) | Sysadmin, virtualization, hardening 🛡️ | ✅ **in this repo** |
+| 2 | [**minitalk**](./circle-2/minitalk) | UNIX signals, client-server IPC 📡 | ✅ **in this repo** |
+| 2 | [**push_swap**](./circle-2/push_swap) | Sorting algorithms & complexity ⚙️ | ✅ **in this repo** |
+| 2 | [**fract-ol**](./circle-2/fract-ol) | Graphics & complex numbers with MiniLibX 🌀 | ✅ **in this repo** |
+| 3 | [**minishell**](./circle-3/minishell) | Writing your own bash 🐚 | ✅ **in this repo** |
+| 3 | [**Philosophers**](./circle-3/philosophers) | Threads, mutexes, deadlocks 🍝 | ✅ **in this repo** |
+| 4 | [**NetPractice**](./circle-4/netpractice) | TCP/IP addressing & subnetting 🌐 | ✅ **in this repo** |
+| 4 | [**cub3d**](./circle-4/cub3d) | Raycasting - a 3D maze like Wolfenstein 🎮 | ✅ **in this repo** |
+| 4 | [**CPP Module 00**](./circle-4/cpp-module-00) | C++ basics, classes, `std::string` | ✅ **in this repo** |
+| 4 | [**CPP Module 01**](./circle-4/cpp-module-01) | Memory, references, pointers to members | ✅ **in this repo** |
+| 4 | [**CPP Module 02**](./circle-4/cpp-module-02) | Ad-hoc polymorphism, operator overloading | ✅ **in this repo** |
+| 4 | [**CPP Module 03**](./circle-4/cpp-module-03) | Inheritance 🧬 | ✅ **in this repo** |
+| 4 | [**CPP Module 04**](./circle-4/cpp-module-04) | Subtype polymorphism, abstract classes | ✅ **in this repo** |
+| 5 | **CPP Module 05** | Exceptions & nested classes | 🚧 in progress at 42 |
+| 5 | **CPP Modules 06-09** | Casts, templates, STL containers | 🔮 coming |
+| 5 | **Inception** | Docker, docker-compose, infrastructure 🐳 | 🔮 coming |
+| 5 | **webserv / ft_irc** | Your own HTTP server / IRC server | 🔮 coming |
+| 6 | **ft_transcendence** | Full-stack web app - the final boss 👑 | 🔮 coming |
 
 *The table fills up as projects land here - hit `Watch` 👀 to follow along.*
 
@@ -62,9 +62,9 @@ graph LR
 ```
 
 ```bash
-./42sync.sh add  cpp-module-01 '<vogsphere-url>'   # import a project WITH its history
-./42sync.sh push cpp-module-05                     # submit to 42 + mirror here, one command
-./42sync.sh pull cpp-module-05                     # grab commits pushed from another clone
+./42sync.sh add  circle-5/cpp-module-06 '<vogsphere-url>'   # import a project WITH its history
+./42sync.sh push circle-5/cpp-module-05                     # submit to 42 + mirror here, one command
+./42sync.sh pull circle-5/cpp-module-05                     # grab commits pushed from another clone
 ```
 
 Fellow 42 students: it's campus-agnostic - point it at your own vogsphere URLs and enjoy. ⭐
