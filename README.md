@@ -26,7 +26,7 @@ At 42 there are no teachers, no lectures and no courses: you learn **C, C++, Uni
 
 | ⭕ | 🪐 Project | 🧩 What it teaches | 📌 Status |
 |---|---|---|---|
-| 0 | [**Libft**](./circle-0/libft) | Rebuilding the C standard library from zero | ✅ **in this repo** |
+| 0 | [**Libft**](./libft) | Rebuilding the C standard library from zero | ✅ **in this repo** |
 | 1 | [**ft_printf**](./circle-1/ft_printf) | Variadic functions, formatting, parsing | ✅ **in this repo** |
 | 1 | [**get_next_line**](./circle-1/get_next_line) | File descriptors, buffers, static variables | ✅ **in this repo** |
 | 1 | [**Born2beRoot**](./circle-1/born2beroot) | Sysadmin, virtualization, hardening 🛡️ | ✅ **in this repo** |
