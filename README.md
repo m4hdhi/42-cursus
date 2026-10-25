@@ -38,6 +38,8 @@ The stack serves a WordPress website at `https://mamuzamm.42.fr`:
   by its own nginx on port 8080 inside the network. The main nginx forwards
   `https://mamuzamm.42.fr/resume/` to it, so port 443 stays the only entrypoint.
 
+## Project description
+
 ### Use of Docker and sources included
 
 Each service has its own folder in `srcs/requirements/` with a `Dockerfile`, a

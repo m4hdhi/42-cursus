@@ -5,10 +5,17 @@ COMPOSE		= docker compose -f srcs/docker-compose.yml
 all: up
 
 # Create everything the stack needs before it can start:
+#   - stop if old data exists without its secrets (fresh clone, old install)
 #   - the host folders behind the two named volumes
 #   - srcs/.env (copied from the template if missing)
 #   - the secret files (random passwords, generated only if missing)
 setup:
+	@if [ ! -f secrets/db_password.txt ] && [ -f $(DATA_DIR)/wordpress/wp-config.php ]; then \
+		echo "Error: $(DATA_DIR) holds a previous install, but secrets/ is missing."; \
+		echo "New passwords would not match it. Copy your old secrets/ folder here,"; \
+		echo "or run 'make fclean' to delete the old data and start from scratch."; \
+		exit 1; \
+	fi
 	@mkdir -p $(DATA_DIR)/mariadb $(DATA_DIR)/wordpress
 	@test -f srcs/.env || cp srcs/.env.example srcs/.env
 	@mkdir -p secrets

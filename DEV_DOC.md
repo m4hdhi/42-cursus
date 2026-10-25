@@ -23,6 +23,12 @@
 `.env` is copied from the template and the secrets get random values
 (`openssl rand -hex`). You can also create them by hand before running `make`.
 
+If `secrets/` is missing but `/home/mamuzamm/data` still contains a previous
+install (e.g. after a fresh `git clone`), `make` stops with an error instead
+of generating new passwords that would not match the existing database.
+Either copy the old `secrets/` folder into the clone, or run `make fclean`
+to delete the old data and start from scratch.
+
 The administrator name (`WP_ADMIN_USER`) must not contain `admin` or
 `administrator`.
 
@@ -79,8 +85,11 @@ To change the resume, edit `srcs/requirements/bonus/website/site/` and run
 Useful Docker commands:
 
 ```sh
+docker compose -p inception ps                     # status, from any folder
 docker exec -it wordpress bash                     # shell in a container
 docker exec -it mariadb mariadb -u root -p         # MariaDB console (root password)
+docker exec -it mariadb mariadb -u wpuser -p wordpress   # as the WordPress user
+                                                   # then: SHOW TABLES; SELECT user_login FROM wp_users;
 docker exec wordpress wp user list --allow-root    # WordPress users
 docker volume ls                                   # list volumes
 docker volume inspect inception_wordpress          # see where the data is
