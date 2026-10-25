@@ -1,0 +1,84 @@
+name: inception
+
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:inception
+    build:
+      context: requirements/nginx
+      args:
+        DOMAIN_NAME: ${DOMAIN_NAME}
+    ports:
+      - "443:443"
+    volumes:
+      - wordpress:/var/www/html
+    networks:
+      - inception
+    depends_on:
+      - wordpress
+    restart: always
+
+  wordpress:
+    container_name: wordpress
+    image: wordpress:inception
+    build: requirements/wordpress
+    env_file: .env
+    secrets:
+      - db_password
+      - credentials
+    volumes:
+      - wordpress:/var/www/html
+    networks:
+      - inception
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    restart: always
+
+  mariadb:
+    container_name: mariadb
+    image: mariadb:inception
+    build: requirements/mariadb
+    env_file: .env
+    secrets:
+      - db_password
+      - db_root_password
+    volumes:
+      - mariadb:/var/lib/mysql
+    networks:
+      - inception
+    healthcheck:
+      test: ["CMD-SHELL", "mariadb-admin ping --silent -u $$MYSQL_USER -p$$(cat /run/secrets/db_password)"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: always
+
+# Named volumes whose data is stored in /home/<login>/data on the host
+volumes:
+  mariadb:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/mamuzamm/data/mariadb
+  wordpress:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/mamuzamm/data/wordpress
+
+networks:
+  inception:
+    name: inception
+    driver: bridge
+
+# Mounted read-only in the containers at /run/secrets/<name>
+secrets:
+  db_password:
+    file: ../secrets/db_password.txt
+  db_root_password:
+    file: ../secrets/db_root_password.txt
+  credentials:
+    file: ../secrets/credentials.txt
