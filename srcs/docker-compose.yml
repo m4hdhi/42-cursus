@@ -15,8 +15,10 @@ services:
     networks:
       - inception
     depends_on:
-      - wordpress
-      - website
+      wordpress:
+        condition: service_healthy
+      website:
+        condition: service_started
     restart: always
 
   wordpress:
@@ -34,6 +36,12 @@ services:
     depends_on:
       mariadb:
         condition: service_healthy
+    # Healthy once WordPress is installed and php-fpm accepts connections
+    healthcheck:
+      test: ["CMD", "php", "-r", "exit(@fsockopen('127.0.0.1', 9000) ? 0 : 1);"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
     restart: always
 
   mariadb:

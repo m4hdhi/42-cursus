@@ -64,8 +64,10 @@ Startup order:
    the site and creates the second user. Then it runs `php-fpm8.2 -F`.
 3. `website` (bonus) starts at the same time as `mariadb`. It has no
    dependencies and only serves the static files in `bonus/website/site/`.
-4. `nginx` starts once `wordpress` and `website` are running, and listens on
-   port 443. It forwards `/resume/` to `website:8080`.
+4. `nginx` starts once `wordpress` is healthy (php-fpm answers on port 9000,
+   so WordPress is installed) and `website` is running. It listens on port 443
+   and forwards `/resume/` to `website:8080`. So when `make` returns, the site
+   is ready to use.
 
 To change the resume, edit `srcs/requirements/bonus/website/site/` and run
 `make`. The files are copied into the image, so the website image is rebuilt.

@@ -70,9 +70,11 @@ Each service has its own folder in `srcs/requirements/` with a `Dockerfile`, a
   stop signals from Docker directly. There is no `tail -f`, `sleep` or infinite loop.
 - **Idempotent startup scripts.** They only initialize what does not exist yet,
   so restarting a container never reinstalls or erases data.
-- **Startup order with a healthcheck.** `wordpress` waits until `mariadb` is
-  *healthy* (it answers `mariadb-admin ping`), so no waiting loop is needed in
-  the scripts.
+- **Startup order with healthchecks.** `wordpress` waits until `mariadb` is
+  *healthy* (it answers `mariadb-admin ping`), and `nginx` waits until
+  `wordpress` is *healthy* (php-fpm accepts connections on port 9000, which
+  only happens once WordPress is installed). No waiting loop is needed in the
+  scripts, and when `make` returns, the site is ready.
 - **Passwords only in Docker secrets.** `srcs/.env` holds non-sensitive settings.
   Passwords are in `secrets/*.txt`, which the Makefile generates randomly the
   first time. Both are ignored by git.
