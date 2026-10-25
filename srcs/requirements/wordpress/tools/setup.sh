@@ -32,6 +32,9 @@ if ! wp core is-installed --allow-root 2> /dev/null; then
     wp user create --allow-root "${WP_USER}" "${WP_USER_EMAIL}" \
         --role=author \
         --user_pass="${WP_USER_PASSWORD}"
+    # Publish comments right away (by default, a user's first comment
+    # waits for an admin to approve it)
+    wp option update --allow-root comment_previously_approved 0
 fi
 
 chown -R www-data:www-data /var/www/html
