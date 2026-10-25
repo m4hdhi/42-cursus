@@ -7,6 +7,7 @@
 | **nginx** | HTTPS web server, the only entrypoint (port 443, TLSv1.2/1.3) | Yes, `https://mamuzamm.42.fr` |
 | **wordpress** | The WordPress website, executed by php-fpm | No, only through nginx |
 | **mariadb** | The database that stores posts, users and settings | No |
+| **website** (bonus) | A static resume site (HTML/CSS) | Only through nginx, at `/resume/` |
 
 ## Start and stop
 
@@ -27,6 +28,7 @@ make down     # stop and remove the containers (website data is kept)
    ```
 2. Website: **https://mamuzamm.42.fr**
 3. Administration panel: **https://mamuzamm.42.fr/wp-admin**
+4. Resume site (bonus): **https://mamuzamm.42.fr/resume/**
 
 The certificate is self-signed, so the browser shows a warning the first time.
 Click *Advanced* → *Accept the risk / Proceed*.
@@ -62,7 +64,7 @@ change the files later, you must reset everything with `make fclean && make`
 ```sh
 make ps
 ```
-All three containers should be `Up`, and `mariadb` should show `(healthy)`.
+All four containers should be `Up`, and `mariadb` should show `(healthy)`.
 
 ```sh
 make logs                      # follow all logs (Ctrl+C to quit)

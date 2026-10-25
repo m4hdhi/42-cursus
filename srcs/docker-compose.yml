@@ -16,6 +16,7 @@ services:
       - inception
     depends_on:
       - wordpress
+      - website
     restart: always
 
   wordpress:
@@ -52,6 +53,15 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+    restart: always
+
+  # Bonus: static resume site, reached through nginx at /resume/
+  website:
+    container_name: website
+    image: website:inception
+    build: requirements/bonus/website
+    networks:
+      - inception
     restart: always
 
 # Named volumes whose data is stored in /home/<login>/data on the host

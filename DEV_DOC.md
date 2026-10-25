@@ -44,9 +44,10 @@ This runs `setup` and then:
 docker compose -f srcs/docker-compose.yml up -d --build
 ```
 
-`--build` builds the three images from our Dockerfiles. They are tagged
-`nginx:inception`, `wordpress:inception` and `mariadb:inception`. Nothing is
-pulled from Docker Hub except the `debian:bookworm` base image.
+`--build` builds the four images from our Dockerfiles. They are tagged
+`nginx:inception`, `wordpress:inception`, `mariadb:inception` and
+`website:inception`. Nothing is pulled from Docker Hub except the
+`debian:bookworm` base image.
 
 Startup order:
 
@@ -55,7 +56,13 @@ Startup order:
 2. Once its healthcheck passes, `wordpress` starts. On an empty volume,
    `setup.sh` downloads WordPress with WP-CLI, writes `wp-config.php`, installs
    the site and creates the second user. Then it runs `php-fpm8.2 -F`.
-3. `nginx` starts and listens on port 443.
+3. `website` (bonus) starts at the same time as `mariadb`. It has no
+   dependencies and only serves the static files in `bonus/website/site/`.
+4. `nginx` starts once `wordpress` and `website` are running, and listens on
+   port 443. It forwards `/resume/` to `website:8080`.
+
+To change the resume, edit `srcs/requirements/bonus/website/site/` and run
+`make`. The files are copied into the image, so the website image is rebuilt.
 
 ## Manage containers and volumes
 

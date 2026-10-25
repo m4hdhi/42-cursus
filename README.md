@@ -13,9 +13,9 @@ The stack serves a WordPress website at `https://mamuzamm.42.fr`:
 ```
             host:443 (HTTPS, TLSv1.2/1.3 only)
                      │
-            ┌────────▼────────┐
-            │      nginx      │  reverse proxy + TLS
-            └────────┬────────┘
+            ┌────────▼────────┐  /resume/ (HTTP 8080)   ┌─────────────────┐
+            │      nginx      ├────────────────────────►│     website     │  bonus:
+            └────────┬────────┘                         └─────────────────┘  static resume
                      │ FastCGI (port 9000)
             ┌────────▼────────┐
             │    wordpress    │  WordPress + php-fpm
@@ -24,7 +24,7 @@ The stack serves a WordPress website at `https://mamuzamm.42.fr`:
             ┌────────▼────────┐
             │     mariadb     │  database
             └─────────────────┘
-   all three containers are on the "inception" bridge network
+   all containers are on the "inception" bridge network
 ```
 
 - **nginx** is the only entrypoint: it is the only container with a published
@@ -34,6 +34,9 @@ The stack serves a WordPress website at `https://mamuzamm.42.fr`:
 - **mariadb** stores the WordPress database. It is not reachable from outside.
 - Two **named volumes** keep the data on the host in `/home/mamuzamm/data`:
   `mariadb` (database files) and `wordpress` (website files).
+- **website** (bonus) is a static resume site in HTML and CSS (no PHP), served
+  by its own nginx on port 8080 inside the network. The main nginx forwards
+  `https://mamuzamm.42.fr/resume/` to it, so port 443 stays the only entrypoint.
 
 ### Use of Docker and sources included
 
@@ -51,6 +54,8 @@ Each service has its own folder in `srcs/requirements/` with a `Dockerfile`, a
 | `nginx/conf/nginx.conf` | HTTPS server on port 443, TLSv1.2/1.3, forwards PHP to `wordpress:9000` |
 | `wordpress/conf/www.conf` | php-fpm pool: listen on port 9000 instead of a Unix socket |
 | `wordpress/tools/setup.sh` | First start: downloads, configures and installs WordPress with WP-CLI, creates the 2 users. Then starts `php-fpm` |
+| `bonus/website/site/` | The resume page: `index.html` and `style.css` |
+| `bonus/website/conf/website.conf` | nginx config of the website container: serves the static files on port 8080 |
 
 ### Main design choices
 
@@ -133,7 +138,8 @@ and `openssl`.
    and random passwords in `secrets/`.
 3. Open `https://mamuzamm.42.fr` (accept the self-signed certificate warning).
    The admin panel is at `https://mamuzamm.42.fr/wp-admin`. The passwords are
-   in `secrets/credentials.txt`.
+   in `secrets/credentials.txt`. The bonus resume site is at
+   `https://mamuzamm.42.fr/resume/`.
 
 | Command | Effect |
 |---------|--------|
@@ -170,6 +176,7 @@ AI (Claude, by Anthropic) was used to:
 
 - draft the first version of the Dockerfiles, startup scripts, `docker-compose.yml`,
   `Makefile` and the documentation files;
+- turn my CV into the HTML/CSS of the bonus resume site;
 - write and run test commands (TLS version checks, crash/restart test,
   persistence test, database access checks);
 - explain concepts (PID 1 and `exec`, MariaDB bootstrap mode, named volumes
