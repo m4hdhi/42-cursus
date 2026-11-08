@@ -1,0 +1,11 @@
+[mysqld]
+user                    = mysql
+pid-file                = /run/mysqld/mysqld.pid
+socket                  = /run/mysqld/mysqld.sock
+datadir                 = /var/lib/mysql
+port                    = 3306
+# Listen on all interfaces so WordPress can connect through the Docker network
+# (the default 127.0.0.1 only accepts connections from inside this container)
+bind-address            = 0.0.0.0
+character-set-server    = utf8mb4
+collation-server        = utf8mb4_general_ci
