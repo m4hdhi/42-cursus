@@ -42,7 +42,7 @@ At 42 there are no teachers, no lectures and no courses: you learn **C, C++, Uni
 | 4 | [**CPP Module 02**](./circle-4/cpp-module-02) | Ad-hoc polymorphism, operator overloading | ✅ **in this repo** |
 | 4 | [**CPP Module 03**](./circle-4/cpp-module-03) | Inheritance 🧬 | ✅ **in this repo** |
 | 4 | [**CPP Module 04**](./circle-4/cpp-module-04) | Subtype polymorphism, abstract classes | ✅ **in this repo** |
-| 5 | **CPP Module 05** | Exceptions & nested classes | 🚧 in progress at 42 |
+| 5 | [**CPP Module 05**](./circle-5/cpp-module-05) | Exceptions & nested classes | ✅ **in this repo** |
 | 5 | [**CPP Module 06**](./circle-5/cpp-module-06) | C++ casts: `static_cast`, `reinterpret_cast`, `dynamic_cast` | ✅ **in this repo** |
 | 5 | **CPP Modules 07-09** | Templates, STL containers & algorithms | 🔮 coming |
 | 5 | [**Inception**](./circle-5/inception) | Docker, docker-compose, infrastructure 🐳 | ✅ **in this repo** |
