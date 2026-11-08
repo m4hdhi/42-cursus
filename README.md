@@ -44,7 +44,7 @@ At 42 there are no teachers, no lectures and no courses: you learn **C, C++, Uni
 | 4 | [**CPP Module 04**](./circle-4/cpp-module-04) | Subtype polymorphism, abstract classes | ✅ **in this repo** |
 | 5 | **CPP Module 05** | Exceptions & nested classes | 🚧 in progress at 42 |
 | 5 | **CPP Modules 06-09** | Casts, templates, STL containers | 🔮 coming |
-| 5 | **Inception** | Docker, docker-compose, infrastructure 🐳 | 🔮 coming |
+| 5 | [**Inception**](./circle-5/inception) | Docker, docker-compose, infrastructure 🐳 | ✅ **in this repo** |
 | 5 | [**ft_irc**](./circle-5/ft_irc) | Your own IRC server - sockets, `poll()`, RFC 1459 💬 | ✅ **in this repo** |
 | 6 | [**ft_transcendence**](./ft_transcendence) | Full-stack web app - the final boss 👑 | 🔮 coming |
 
